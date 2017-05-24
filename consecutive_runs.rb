@@ -1,4 +1,4 @@
-# Methods to check array for increasing or decreasing runs of 3
+# Methods to check for increasing/decreasing runs of 3 from an array index position
 def positive_run(array, index)
   return false unless array[index + 1] == array[index] + 1
   return false unless array[index + 2] == array[index + 1] + 1
@@ -11,7 +11,7 @@ def negative_run(array, index)
   true
 end
 
-# Return array from input, with or without spaces. Example input: [1, 2, 3] or [1,2,3]
+# Return array whether input has spaces or no spaces. Example input: [1, 2, 3] or [1,2,3]
 def process_input(input)
   input.join(' ').gsub(/["\[\]\s]/, '').split(',').map(&:to_i)
 end
